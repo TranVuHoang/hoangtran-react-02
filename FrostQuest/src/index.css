@@ -1,0 +1,118 @@
+/* google font: Poppins, Urbanist, Kings */
+@import url("https://fonts.googleapis.com/css2?family=Kings&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: var(--urbanist-font);
+  scroll-behavior: smooth;
+}
+
+:root {
+  --poppins-font: "Poppins", sans-serif;
+  --urbanist-font: "Urbanist", sans-serif;
+  --kings-font: "Kings", cursive;
+
+  --white-color: #fff;
+  --text-color: #2b2a30;
+  --primary-color: #4400e7;
+  --primary-dark: #281963;
+  --primary-light: #d3dfe9;
+  --pg-color: #363539;
+  --btn-dark: #212529;
+  --prim-grident: line-gradient(90deg, #4300e7 0%, #7d00fc 100%);
+  --btn-light: line-gradient(90deg, #4300e7 0%, #7d00fc 100%);
+
+  --top-color: #f7f7f7;
+  --border-color: #4f4e5126;
+  --icon-prim-color: #3d6ad6;
+  --icon-sec-color: #e60023;
+  --footer-color: #183153;
+  --social-color: #434cda;
+  --secondary-color: #54595f;
+
+  --transition-regular: all 0.3s ease;
+  --transition-slow: all 0.6s ease;
+}
+
+body {
+  overflow: hidden !important;
+}
+
+.custom-nav {
+  padding: 0 12%;
+  height: 80px;
+  border: 1px solid var(--primary-light);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  z-index: 999;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  background: #000;
+}
+
+.white-them a,
+.white-them .search-icon {
+  color: var(--white-color);
+}
+
+.black-them a,
+.black-them .logo span,
+.black-them .search-icon {
+  color: #000;
+}
+
+.logo {
+  font-family: var(--kings-font);
+  font-size: 2.5rem;
+  color: var(--white-color);
+}
+
+.logo span {
+  font-family: var(--kings-font);
+  color: var(--white-color);
+}
+
+.nav-item a {
+  position: relative;
+  font-size: 1.2rem;
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: var(--urbanist-font);
+  margin-left: 20px;
+}
+
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--white-color);
+  transition: var(--transition-regular);
+}
+
+.nav-item a:hover::after {
+  width: 100%;
+}
+
+.search-icon {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  color: var(--white-color);
+  background: var(--white-color);
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.4);
+}
